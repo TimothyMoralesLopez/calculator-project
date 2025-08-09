@@ -1,1 +1,1 @@
-# calculator-project
+This is my calculator project. In this project, I will utilize everything I've learned so far in this curriculum. I am anxious to get to the part where I will have to style the interface using CSS, as that is truly my weakest area. However, I am confident I can get through it and push through to get the project complete. There are also a few components of the actual calculator itself that look intimidating at the moment, but I'm sure that breaking the whole project up into smaller more manageable pieces will serve me well here. 
