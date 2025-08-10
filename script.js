@@ -8,10 +8,6 @@ let symbolDeclared = false;
 let operationComplete = false;
 let errorReceived = false; 
 
-function myDebug() {
-    console.table([ {firstNumDeclared, secondNumDeclared, operationComplete, errorReceived, resultNum} ]); 
-}
-
 function addNums(a, b) {
     return Number(a) + Number(b);
 }
@@ -145,94 +141,89 @@ const myClearButton = document.querySelector(".clearButton");
 myOneButton.addEventListener("click", function() {
     updateNums("1"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myTwoButton.addEventListener("click", function() {
     updateNums("2"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myThreeButton.addEventListener("click", function() {
     updateNums("3"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myFourButton.addEventListener("click", function() {
     updateNums("4"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myFiveButton.addEventListener("click", function() {
     updateNums("5"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 mySixButton.addEventListener("click", function() {
     updateNums("6"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 mySevenButton.addEventListener("click", function() {
     updateNums("7"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myEightButton.addEventListener("click", function() {
     updateNums("8"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myNineButton.addEventListener("click", function() {
     updateNums("9"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 myZeroButton.addEventListener("click", function() {
     updateNums("0"); 
     updateDisplayDiv(); 
-    myDebug();
 }); 
 
 myAddButton.addEventListener("click", function() {
     updateOperator("+");
+    if(errorReceived) {
+        clearCalc(); 
+    }
     updateDisplayDiv(); 
-    myDebug();
 });
 
 mySubtractButton.addEventListener("click", function() {
     updateOperator("-");
+    if(errorReceived) {
+        clearCalc(); 
+    }
     updateDisplayDiv(); 
-    myDebug();
 });
 
 myMultiplyButton.addEventListener("click", function() {
     updateOperator("*");
+    if(errorReceived) {
+        clearCalc(); 
+    }
     updateDisplayDiv(); 
-    myDebug();
 });
 
 myDivideButton.addEventListener("click", function() {
     updateOperator("/");
+    if(errorReceived) {
+        clearCalc(); 
+    }
     updateDisplayDiv(); 
-    myDebug();
 });
 
 myEqualButton.addEventListener("click", function() {
     if (firstNumDeclared && symbolDeclared && !secondNumDeclared){
         secondNumDeclared = true; 
-        myDebug();
     }
     if (firstNumDeclared && symbolDeclared && secondNumDeclared) {
         updateResult(operate(firstNum, operatorSymbol, secondNum));
         errorReceived = false; 
         updateDisplayDiv();
-        myDebug();
     }
 });
 
 myClearButton.addEventListener("click", function() {
     clearCalc();
     updateDisplayDiv(); 
-    myDebug();
 });
 
